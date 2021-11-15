@@ -7,7 +7,7 @@
 from tensorflow.keras import models, layers
 
 
-def init_model(input_dim=10):
+def init_binary_model(input_dim=10):
     """instantiate a basic binary classification neural network model
        accepts an integer, input_dim, used to create first dense layer"""
     model = models.Sequential()
@@ -22,5 +22,6 @@ def init_model(input_dim=10):
     return model
 
 if __name__ == '__main__':
-    model = init_model()
+    model = init_binary_model()
+    print(type(model))
     model.summary()
